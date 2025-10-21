@@ -28,4 +28,5 @@ bool is_complete (char a[9][9]);
 
 bool make_move(std::string position, char digit, char a[9][9]);
 
+bool save_board(std::string filename, char a[9][9]);
 #endif

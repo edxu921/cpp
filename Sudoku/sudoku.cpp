@@ -190,4 +190,34 @@ bool make_move(std::string position, char digit, char a[9][9])
   return true;
     
   }
+
+
+// function which saves board in new file
+
+bool save_board(std::string filename, char a [9][9])
+{
+ 
+  ofstream out_stream;
+  out_stream.open(filename);
+  if(out_stream.fail())
+    return false;
+
+  for (int row =0; row <9; row++)
+    {
+
+      for (int column =0; column <9; column ++)
+	{
+	  out_stream.put(a[row][column]);
+	}
+      out_stream.put('\n');// new line after each line
+	
+		     
+    }
+    
+    
+  out_stream.close();
+  return true;
+
+  
+  }
   

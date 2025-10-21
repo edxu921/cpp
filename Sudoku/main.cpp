@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <cstring>
 #include <typeinfo>
+#include <fstream>
 #include "sudoku.h"
 
 using namespace std;
@@ -14,7 +15,7 @@ int main() {
   
   /* This section illustrates the use of the pre-supplied helper functions. */
 
-  /*
+  
   cout << "============= Pre-supplied functions =============\n\n";
 
   cout << "Calling load_board():\n";
@@ -24,9 +25,9 @@ int main() {
 	cout << "Displaying Sudoku board with display_board():\n";
   display_board(board);
   cout << "Done!\n\n";
-  */
+  
 
-  /*
+  
   cout << "=================== Question 1 ===================\n\n";
 
   
@@ -48,7 +49,7 @@ int main() {
   }
   cout << "complete.\n\n";
 
-  */
+  
 
 
   cout << "=================== Question 2 ===================\n\n";
@@ -56,6 +57,7 @@ int main() {
   load_board("easy.dat", board);
 
   // Should be OK
+  
 
   string position = "I8";  // user input
   char digit = '1';       // user input
@@ -68,7 +70,6 @@ int main() {
   cout << "a valid move. The board is:\n";
   display_board(board);
   
-
 
   // write more tests
 
@@ -99,11 +100,13 @@ if (!make_move("G8", '4', board)) {
   
   
  
-  /*
+ 
 
-  cout << "=================== Question 3 ===================\n\n";
+  //cout << "=================== Question 3 ===================\n\n";
 
-  load_board("easy.dat", board);
+    // BOOL function which outputs to board to new file, with new filename specified in function
+    load_board("easy.dat", board);
+  
   if (save_board("easy-copy.dat", board)) {
     cout << "Save board to 'easy-copy.dat' successful.\n";
   } else {
@@ -111,6 +114,9 @@ if (!make_move("G8", '4', board)) {
   }
   cout << '\n';
 
+  
+
+  /*
   cout << "=================== Question 4 ===================\n\n";
 
   load_board("easy.dat", board);
